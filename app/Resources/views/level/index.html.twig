@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Niveau{% endblock %}
+
+{% block body %}
+    <div class="col-sm-12">
+        <div class="col-sm-9"><h3>Niveau</h3></div>
+        <div class="col-sm-3 text-right float-right"><a href="{{ path('create_level') }}" class="btn btn-primary">Ajouter</a></div>
+    </div>
+    <div class="clearfix mg-top-20"><br/><hr><br/></div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Action</th>
+            <th>Libellé</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for level in levels %}
+            <tr>
+                <td>{{ level.id }}</td>
+                <td>
+                    <a href="{{ path('update_level', {'id': level.id}) }}" class="fa fa-edit fa-fw fa-lg"></a>
+                    <a href="{{ path('delete_level', {'id': level.id}) }}" class="fa fa-trash fa-fw fa-lg"></a>
+                </td>
+                <td>{{ level.label }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

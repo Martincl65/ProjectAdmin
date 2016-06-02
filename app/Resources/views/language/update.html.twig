@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Langage{% endblock %}
+
+{% block body %}
+    <div class="col-sm-12">
+        <div class="col-sm-12"><h3>Modifier un langage</h3></div>
+    </div>
+    <div class="clearfix mg-top-20"><br/><hr><br/></div>
+
+    {{ form_start(form) }}
+        {{ form_row(form.label) }}
+        <input type="submit" name="submit" class="btn btn-success">
+    {{ form_end(form) }}
+{% endblock %}

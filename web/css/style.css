@@ -1,0 +1,224 @@
+/*
+ * Base structure
+ */
+.mg-top-20 {
+    margin-top: 20px;
+}
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #595e6c;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand, .sidebar-nav > .sidebar-small-info {
+    text-align: center;
+    text-indent: 0;
+}
+
+.sidebar-nav > .sidebar-small-info {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 20px;
+}
+
+.sidebar-nav > .sidebar-brand a, .sidebar-nav > .sidebar-small-info a {
+    color: #ffffff;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+.col-xs-12 .mg-top-20, h1, p{
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.fa-sign-out{
+    color: white;
+}
+
+.fa-trash{
+    color: red;
+}
+
+.fa-edit{
+    color: black;
+}
+
+.ace_editor {
+    width: 100%!important;
+}
+
+.label-php{
+    background-color: #c16085;
+}
+
+.label-sql{
+    background-color: #b6db8b;
+}
+
+.label-javascript{
+    background-color: #e8ab55;
+}
+
+.title-php{
+    color: #c16085;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.title-sql{
+    color: #b6db8b;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.title-javascript{
+    color: #e8ab55;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.identif{
+    text-align: center;
+    font-style: italic;
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+.btn-valid{
+    background: lightgray;
+    color: black;
+}
+
+
+/** Surcharge plugin multiple select **/
+.ms-choice {
+    border: none;
+    line-height: 30px;
+    height: 30px;
+    color: inherit;
+}
+.ms-choice > span {
+    padding-left: 15px;
+}
+.ms-parent.form-control {
+    padding: 0;
+    width: 100%!important;
+}
+.ms-drop {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #555;
+}
+.ms-drop ul > li label input {
+    margin-top: 0;
+}
